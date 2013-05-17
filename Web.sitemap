@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+  <siteMapNode url="~/Default.aspx" title="Home"  description="">
+
+  
+    <siteMapNode url="~/Pages/Default.aspx" title="Stamp Catalogs"  description="">
+    <siteMapNode url="~/Pages/StampList.aspx" title="View as list"  description=""/>
+    <siteMapNode url="~/Pages/StampCatalogue.aspx" title="View as catalogue"  description=""/>
+  </siteMapNode>
+    <siteMapNode url="~/Pages/Register.aspx" title="Register"  description=""/>
+    <siteMapNode url="~/Pages/Specials.aspx" title="Current specials"  description=""/>
+    <siteMapNode url="~/Pages/ChangePassword.aspx" title="Change Password"  description=""/>
+
+  
+  <siteMapNode url="~/Admin/Default.aspx" title="Administration"  description="" >
+    <siteMapNode url="~/Admin/Managecatlogue.aspx" title="Manage Catlogue"  description=""/>
+    <siteMapNode url="~/Admin/User.aspx" title="Add new user"  description=""/>
+    <siteMapNode url="~/Admin/AddUserToRole.aspx" title="Add user to role"  description=""/>
+  </siteMapNode>
+
+  <siteMapNode url="~/Shopping/ShoppingCartPage.aspx" title="Shopping cart"  description="" >
+    <siteMapNode url="~/Shopping/Checkout.aspx" title="Checkout"  description=""/>
+  </siteMapNode>
+
+  <siteMapNode url="~/About/Default.aspx" title="About"  description="">
+    <siteMapNode url="~/About/ContactUs.aspx" title="Contact Us"  description=""/>
+    <siteMapNode url="~/About/About.aspx" title="About Us "  description="" />
+  </siteMapNode>
+  </siteMapNode>
+  
+</siteMap>
+

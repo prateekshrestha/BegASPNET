@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+            <Link rel="stylesheet" type="text/css" href="App_Themes\Monochrome\MonochromeStyle.css">       
+
+ </head>
+
+<body>
+    <form id="form1" runat="server">     
+        <!------------Header---------------------------->
+      
+        <div id="header"></div>
+        <!------------Breadcrumb------------------------>
+             <div id="breadcrumb">
+        <!------------Sitemappath----------------------->
+        <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+        </asp:SiteMapPath>
+        </div>
+        <!------------Main------------------------------>
+    &nbsp;<!------------Footer------------------------------>
+    <div id="main"> 
+          <div id="content">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+                </div> 
+        <!------------Header--------------------------->
+           <div id ="menu" style="background:#999999; width: 236px;"; width:294px;">
+                    Select the theme<br/>                 
+        <!------------Dropdownlist---------------------->
+            <asp:DropDownList ID="ThemeList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ThemeList_SelectedIndexChanged">
+            <asp:ListItem>Monochrome</asp:ListItem>
+                <asp:ListItem>Color1</asp:ListItem>
+            </asp:DropDownList>
+            <br /><br /> Navigation<br />========================
+            <div style="background-color:#cccccc; height: 395px;" class="dynamicMenuItem" 
+                        ,"dynamicHoverStyle">
+                            <asp:SiteMapDataSource 
+                                ID="SiteMapDataSource1" runat="server" />
+                            <asp:DropDownList ID="DropDownList1" runat="server">
+                            </asp:DropDownList>
+                            <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" 
+                                Height="268px" Width="235px">
+                            </asp:TreeView>&nbsp;
+             </div>
+                    <br />
+         
+            <div class="loginControl"style="background-color:#cccccc; margin-top: 31px;" 
+                        class="dynamicMenuItem" ,"dynamicHoverStyle">&nbsp;<center>
+                    <asp:LoginView ID="LoginView1" runat="server">
+                    </asp:LoginView>
+                    <asp:Login ID="Login1" runat="server" 
+                        CreateUserText="Not a member?Please register!" 
+                        CreateUserUrl="~/Pages/Register.aspx" onauthenticate="Login1_Authenticate">
+                    </asp:Login>
+                    <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                </center>
+                <a href="Pages/Register.aspx"><U</U></a>&nbsp;
+            </div>
+           
+    
+        </div>
+           
+    
+        </div>
+    </div>
+        <div id="footer"> 
+                <div id= "lastupdate"> Last updated:
+                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                </div>
+                <div id="copyright"><u> © Prateek Shrestha</u>
+                                    <br /> All images  ©R.Balsys 
+                </div>
+            </div>
+    </div>
+    </form>
+    
